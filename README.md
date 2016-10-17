@@ -1,1 +1,1 @@
-# zklgnq_js
+copyrights@zklgnq_js

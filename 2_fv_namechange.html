@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>1_zklgnq_js</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+	<style>
+		body{background:#f6f6f6;}
+		.getrepo input{}
+		.getrepo{display:block;margin:0 auto;width:1200px;text-align:center;}
+		.getrepo h1{padding:20px 0;text-align:center;}
+		#username{padding:10px;}
+		input[type=submit]{padding:12px 20px;background:#4b4b4b;border:none;color:#fff;font-weight:700;}
+	</style>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+	<div class="getrepo">
+		<h1 id="title">Welcome to <b style="color:#cd040b;" id="title1">zklgnq</b> GIT Repository</h1>		
+		<!-- <form> -->	
+			<input type="text" id="username" autocomplete="off"/>
+			<input type="submit" value="Sign In" onclick="validate();"/>
+		<!-- </form> -->
+	</div>
+	
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script> 
+	<script type="text/javascript">
+		//var uname=document.getElementById('username').value;
+		//var reponame=document.getElementById('title');
+		function validate(){
+			var uname=document.getElementById('username').value;
+			if(uname.length===0){
+				alert('Please enter a Value');
+				return;
+			}
+			/*else{
+				alert('User Name assigned to global header');
+				return;
+			}*/
+			//var reponame=document.getElementById('title');
+			title1.innerHTML=uname;
+		}
+		
+	</script>
+	<!--
+		Header name change
+		Form Validation
+		
+		Errors:
+		when we put input fields in a form name of title does not change & typed value in input box after submitting goes to hide.
+		
+		
+	-->
+  </body>
+</html>

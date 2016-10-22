@@ -9,6 +9,7 @@
 
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
+	
 	<style>
 		body{background:#f6f6f6;}
 		.getrepo input{}
@@ -36,6 +37,45 @@
 	
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script> 
+	<script>
+		$('<div style="width:500px;height:500px;background:#F00;"></div>')
+	</script>
+	<script>
+		var myNodetest=document.getElementById('username');
+		alert('myNodetest.parentNode.nodeName');
+	</script>
+	<script>
+		var fruit="apple";
+		switch(fruit){
+			case "vegetable":
+			document.write("This is Vegatable Market");
+			break;
+			case "apple":
+			document.write("This is Fruit Market");
+			break;			
+			default:
+			document.write("This is Nonveg Market");
+			break;
+		  }
+	
+		/*var rightNow = new Date();
+		var currentHour = rightNow.getHours();
+		switch(true)
+		{
+		  case (currentHour > 8 && currentHour < 12):
+			document.write("Morning, sunshine!");
+			break;
+		  case (currentHour === 12):
+			document.write("Lunch time!");
+			break;
+		  case (currentHour > 12 && currentHour < 18):
+			document.write("Fight the urge to siesta!");
+			break;
+		  default:
+			document.write("Careful Sparky, they'll think you're a hard worker!");
+			break;
+		}*/
+	</script>
 	<script type="text/javascript">
 		//var uname=document.getElementById('username').value;
 		//var reponame=document.getElementById('title');
@@ -53,7 +93,61 @@
 			title1.innerHTML=uname;
 		}
 		
+		
+		
 	</script>
+	<script>
+		//ref.code(2:54)
+			document.write("<br/>");
+			var playlist=['one','two','three','four'];
+			for(i in playlist){
+				document.write("<br/>"+"The order number is : "+playlist[i]);
+			}
+			document.write("<br/>");
+			for(i=0;i<playlist.length;i++){				
+				document.write("<br/>"+"The order number is : "+playlist[i]);
+			}
+			document.write("<br/>");
+			for(i=playlist.length-1;i>-1;i--){				
+				document.write("<br/>"+"The order number is : "+playlist[i]);
+			}
+			document.write("<br/>");
+	</script>
+	<script>
+		//Local & Global variables
+		//Change global var for particular function
+			document.write("<br/>");
+			var myName="vijay";
+			(function(){
+			var myName="bhaskar";
+			document.write('Inside name is :'+myName);
+			document.write("<br/>");
+			})();											// observe how we call a function only in js without html
+			document.write("Outside name is :"+myName);	
+			document.write("<br/>");
+	</script>
+	<script>
+		//Local & Global variables
+		//change global variable in local entirely
+			document.write("<br/>");
+			var myName="vijay";
+			(function(){
+			myName="bhaskar1";
+			document.write('Inside name is :'+myName);
+			document.write("<br/>");
+			})();											
+			document.write("Outside name is :"+myName);
+			document.write("<br/>");
+		</script>
+		<script>
+		//Local & Global variables
+		//when we don't declare var , JS takes var from program itself one starts first either take varfrom previous script or from localvar(even strict local)
+			document.write("<br/>");			
+			(function(){
+			var myName="loc-var";
+			})();											// here it is taking var name as "bhaskar1" from previous script.
+			document.write("Outside name is :"+myName);
+		</script>
 	<!--
 		Header name change
 		Form Validation
